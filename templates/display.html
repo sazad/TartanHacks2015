@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="static/style.css">
+	<title>EMOJI TRANSLATOR</title>
+</head>
+
+<body>
+
+<h1>EMOJI TRANSLATOR</h1>
+<!--ID IS WHAT IS RETURNED IN REQUEST FORM -->
+<hr>
+
+<div id = "nav">
+	<a href = "/emojis" class="btn">EMOJIS </a>
+	<a href = "/" class="btn"> TRANSLATE </a>
+	<a href = "/about" class="btn">ABOUT </a>
+</div>
+
+<hr>
+{%for i in images%}
+{%if i != "none"%}
+<img src= "{{url_for('static', filename=i)}}", width="100" height="100" alt="previous" title="Previous" border="0">
+{%endif%}
+{%endfor%}
+
+
+
+<br>
+<br>
+<a href = "/">Translate something else?</a>
+
+<br><br><br><br><br><br>
+<div id = "info"> Not what you thought it would be?<br>
+The emoji database is still growing!</div>
+</body>
+</html>
